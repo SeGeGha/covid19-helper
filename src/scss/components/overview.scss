@@ -1,11 +1,39 @@
 #overview {
-  padding: 7rem 2.5rem;
-  background: url('../assets/img/ill-1.png') right no-repeat;
-  background-size: contain;
   filter: $drop-shadow;
 
-  .info {
-    text-align: justify;    
-    margin: 0;
+  .advice {
+    padding: 7rem 2.5rem;
+    background: url('../assets/img/ill-1.png') right no-repeat;
+    background-size: contain;
+
+    .info {
+      text-align: justify;    
+      margin: 0;
+    }
+  }
+
+  .overview {
+    padding: 3rem 2.5rem 1rem;
+    
+    @include flex(row);
+
+    img {
+      width: 50%;
+    }
+
+    .info {
+      text-align: justify;
+
+      &__btn-help {
+        color: $hover-color;
+        background-color: rgba(250, 86, 82, 0.15);
+        transition: all 0.4s;
+
+        &:hover {
+          color: $color;
+          background-color: $hover-color;
+        }
+      }
+    }
   }
 }
