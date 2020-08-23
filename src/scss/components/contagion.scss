@@ -1,0 +1,47 @@
+#contagion {
+  padding: 0 2.5rem;
+
+  .info {
+    margin: 0 auto;
+    text-align: center;
+    filter: $drop-shadow;
+  }
+}
+
+.cards {
+  
+  @include flex(row, stretch, space-around, wrap);
+
+  &__item {
+    width: 30%;
+    max-width: 350px;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+
+    @include flex(column, center, center);
+
+    h4 {
+      margin-bottom: 0.5em;
+      font-size: 1.5rem;
+      line-height: 140%;
+    }
+
+    img {
+      height: 200px;
+      margin-bottom: 2em;
+    }
+
+    p {
+      line-height: 185%;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      padding-bottom: calc(2em - 6px);
+      border-bottom: 6px solid $hover-color;
+    }
+  }
+}

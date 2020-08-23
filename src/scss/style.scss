@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Red+Hat+Display:wght@400;700;900&display=swap');
+
+@import './abstract/variables.scss';
+
+@import './abstract/mixin.scss';
+
+@import './components/header.scss';
+
+@import './components/overview.scss';
+
+@import './components/contagion.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  border: 0;
+  outline: none;
+  cursor: default;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+  color: $color;
+}
+
+p {
+  color: $p-color;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.2em;
+}
+
+body {
+  font-family: 'Red Hat Display', 'Open Sans', sans-serif;
+  background-color: $body-background-color;
+}
+
+.page-wrapper {
+  width: 90%;
+  min-width: 320px;
+  margin: 3rem auto;
+  padding: 1rem 0;
+  background-color: $wrapper-background-color;
+}
