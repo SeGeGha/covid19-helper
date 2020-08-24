@@ -1,0 +1,40 @@
+.preventions-box {
+
+  &__item {
+    padding: 0 2.5em;
+
+    @include flex(row, center, space-between);
+
+    &__message {
+      width: 50%;
+      order: 2;
+
+      &__title {
+        font-size: 2.4rem;
+        line-height: 150%;      
+      }
+
+      &__description {
+        font-size: 1.2rem;
+        line-height: 200%;
+        text-align: justify;
+      }
+    }
+
+    &__image {
+      height: 400px;
+      order: 1;
+    }
+
+    &:nth-child(2n + 2) {
+
+      img {
+        order: 2;
+      }
+
+      div {
+        order: 1;
+      }
+    }
+  }
+}

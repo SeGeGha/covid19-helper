@@ -4,17 +4,25 @@
 
 @import './abstract/mixin.scss';
 
-@import './components/header.scss';
+@import './components/text-block.scss';
 
-@import './components/overview.scss';
+@import './components/navigation.scss';
 
-@import './components/contagion.scss';
+@import './components/cards-block.scss';
 
-@import './components/symptoms.scss';
+@import './components/preventions-block.scss';
 
-@import './components/info-block.scss';
+@import './layout/header.scss';
+
+@import './layout/overview.scss';
+
+@import './layout/contagion.scss';
+
+@import './layout/symptoms.scss';
 
 @import './layout/prevention.scss';
+
+@import './layout/footer.scss';
 
 * {
   margin: 0;
@@ -26,12 +34,12 @@
   cursor: default;
 }
 
-button {
+button, a > img {
   cursor: pointer;
 }
 
 h1, h2, h3, h4 {
-  color: $color;
+  color: $title-color;
   text-transform: capitalize;
 }
 

@@ -1,9 +1,4 @@
-#contagion {
-  padding: 0 2.5rem;
-  filter: $drop-shadow;
-}
-
-.cards {
+.cards-box {
   
   @include flex(row, stretch, space-around, wrap);
 
@@ -18,18 +13,18 @@
 
     @include flex(column, center, center);
 
-    h4 {
+    &__title {
       margin-bottom: 0.5em;
       font-size: 1.5rem;
       line-height: 140%;
     }
 
-    img {
+    &__image {
       height: 200px;
       margin-bottom: 2em;
     }
 
-    p {
+    &__message {
       line-height: 185%;
       text-align: center;
       text-transform: capitalize;

@@ -1,0 +1,42 @@
+.navigation {
+  color: $title-color;
+
+  &__group {
+    display: flex;
+  }
+
+  &__item {
+    padding: 0.5em 1em;
+    font-size: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+
+    &:hover {
+      padding: calc(0.5em - 2px) calc(1em - 2px);
+      color: $hover-color;
+      border: 2px solid $hover-color;
+      border-radius: 45px;
+
+      &::after {
+        top: calc(100% + 2px);
+      }
+    }
+
+    &--actived {
+      position: relative;
+      color: $hover-color;
+      font-weight: 700;
+
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background-color: $hover-color;
+        border-radius: 50%;
+        content: '';
+
+        @include size(0.4rem);
+      }
+    }
+  }
+}

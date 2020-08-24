@@ -1,23 +1,23 @@
 #overview {
   filter: $drop-shadow;
 
-  .advice {
+  .appeal-box {
     padding: 7rem 2.5rem;
     background: url('../assets/img/ill-1.png') right no-repeat;
     background-size: contain;
 
-    .info {
-      text-align: justify;    
+    .info {    
       margin: 0;
+      text-align: justify;
     }
   }
 
-  .overview {
+  .description-box {
     padding: 3rem 2.5rem 1rem;
     
     @include flex(row);
 
-    img {
+    &__image {
       width: 50%;
     }
 
@@ -30,7 +30,7 @@
         transition: all 0.4s;
 
         &:hover {
-          color: $color;
+          color: $title-color;
           background-color: $hover-color;
         }
       }

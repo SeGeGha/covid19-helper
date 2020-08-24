@@ -1,0 +1,9 @@
+#header {
+  padding: 0 2.5rem;
+  
+  @include flex(row, center, space-between);
+
+  img {
+    width: 150%;
+  }
+}

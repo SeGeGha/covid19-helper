@@ -1,41 +1,4 @@
 #prevention {
+  filter: $drop-shadow;
   padding: 3rem 2.5rem 1rem;
-  .container {
-    &__item {
-      padding: 0 2.5em;
-
-      @include flex(row, center, space-between);
-
-      .wrapper {
-        width: 50%;
-        order: 2;
-      }
-
-      img {
-        height: 400px;
-        order: 1;
-      }
-
-      h4 {
-        font-size: 2.4rem;
-        line-height: 150%;
-      }
-
-      p {
-        font-size: 1.2rem;
-        line-height: 200%;
-        text-align: justify;
-      }
-
-      &:nth-child(2n + 2) {
-        img {
-          order: 2;
-        }
-
-        .wrapper {
-          order: 1;
-        }
-      }
-    }
-  }
 }

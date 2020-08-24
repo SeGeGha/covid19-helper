@@ -8,10 +8,10 @@
 <body>
   <div class="page-wrapper">
     <header id="header">
-      <img src="../src/assets/img/Logo.svg" alt="Covid-19 Logo" />
+      <img src="../src/assets/img/Logo.svg" alt="Covid-19 Logo" class="logo" />
       <nav class="navigation">
         <ul class="navigation__group">
-          <li class="navigation__item navigation__item_actived">Overview</li>
+          <li class="navigation__item navigation__item--actived">Overview</li>
           <li class="navigation__item">Contagion</li>
           <li class="navigation__item">Symptoms</li>
           <li class="navigation__item">Prevention</li>
@@ -20,19 +20,19 @@
       </nav>
     </header>
     <section id="overview">
-      <div class="advice">
+      <div class="appeal-box">
         <div class="info">
-          <h3 class="info__title">COVID-19 Alert</h3>
-          <h1 class="info__advice">Stay At Home Quarantine To Stop Corona Virus</h1>
+          <h3 class="info__subtitle">COVID-19 Alert</h3>
+          <h1 class="info__title">Stay At Home Quarantine To Stop Corona Virus</h1>
           <p class="info__message">There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to .</p>
           <button class="info__btn-help">Let Us Help</button>
         </div>        
       </div>
-      <div class="overview">
-        <img src="../src/assets/img/group-viruses.png" alt="Viruses">
+      <div class="description-box">
+        <img src="../src/assets/img/group-viruses.png" alt="Viruses" class="description-box__image">
         <div class="info">
-          <h3 class="info__title">What is COVID-19</h3>
-          <h1 class="info__advice">Coronavirus</h1>
+          <h3 class="info__subtitle">What is COVID-19</h3>
+          <h1 class="info__title">Coronavirus</h1>
           <p class="info__message">Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory illness now called COVID-19.Lauren Sauer, M.S., the director of operations with the Johns Hopkins Office of Critical Event Preparedness and Response</p>
           <button class="info__btn-help">Learn More</button>
         </div>
@@ -40,74 +40,88 @@
     </section>
     <section id="contagion">
       <div class="info">
-        <h3 class="info__title">COVID-19</h3>
-        <h1 class="info__advice">Contagion</h1>
+        <h3 class="info__subtitle">COVID-19</h3>
+        <h1 class="info__title">Contagion</h1>
         <p class="info__message">Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type</p>
       </div>
-      <div class="cards">
-        <div class="cards__item">
-          <img src="../src/assets/img/group1.png" alt="Air Transmission">
-          <h4>Air Transmission</h4>
-          <p>Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify</p>
+      <div class="cards-box">
+        <div class="cards-box__item">
+          <img src="../src/assets/img/group1.png" alt="Air Transmission" class="cards-box__item__image">
+          <h4 class="cards-box__item__title">Air Transmission</h4>
+          <p class="cards-box__item__message">Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify</p>
         </div>
-        <div class="cards__item">
-          <img src="../src/assets/img/group2.png" alt="Human Contacts">
-          <h4>Human Contacts</h4>
-          <p>Washing your hands is one of thesimplest ways you can protect</p>
+        <div class="cards-box__item">
+          <img src="../src/assets/img/group2.png" alt="Human Contacts" class="cards-box__item__image">
+          <h4 class="cards-box__item__title">Human Contacts</h4>
+          <p class="cards-box__item__message">Washing your hands is one of thesimplest ways you can protect</p>
         </div>
-        <div class="cards__item">
-          <img src="../src/assets/img/group3.png" alt="Containted Objects">
-          <h4>Containted Objects</h4>
-          <p>Use the tissue while sneezing,In this way, you can protect your droplets</p>
+        <div class="cards-box__item">
+          <img src="../src/assets/img/group3.png" alt="Containted Objects" class="cards-box__item__image">
+          <h4 class="cards-box__item__title">Containted Objects</h4>
+          <p class="cards-box__item__message">Use the tissue while sneezing,In this way, you can protect your droplets</p>
         </div>
       </div>
-      <div class="corona"></div>
     </section>
     <section id="symptoms">
       <div class="info">
-        <h3 class="info__title">COVID-19</h3>
-        <h1 class="info__advice">Symptoms</h1>
+        <h3 class="info__subtitle">COVID-19</h3>
+        <h1 class="info__title">Symptoms</h1>
         <p class="info__message">Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory</p>
       </div>    
-      <img src="../src/assets/img/symptoms.png" alt="Symptoms" />
+      <img src="../src/assets/img/symptoms.png" alt="Symptoms" class="symptoms__image" />
     </section>
     <section id="prevention">
       <div class="info">
-        <h3 class="info__title">COVID-19</h3>
-        <h1 class="info__advice">What should we do</h1>
+        <h3 class="info__subtitle">COVID-19</h3>
+        <h1 class="info__title">What should we do</h1>
         <p class="info__message">Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory</p>
       </div>     
-      <div class="container">
-        <div class="container__item">
-          <img src="../src/assets/img/mask-girl.png" alt="Wear Masks">
-          <div class="wrapper">
-            <h4>Wear Masks</h4>
-            <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively</p>
+      <div class="preventions-box">
+        <div class="preventions-box__item">
+          <img src="../src/assets/img/mask-girl.png" alt="Wear Masks" class="preventions-box__item__image">
+          <div class="preventions-box__item__message">
+            <h4 class="preventions-box__item__message__title">Wear Masks</h4>
+            <p class="preventions-box__item__message__description">Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively</p>
           </div>
         </div>
-        <div class="container__item">
-          <img src="../src/assets/img/wash-girl.png" alt="Wear Your Hands">
-          <div class="wrapper">
-            <h4>Wash Your Hands</h4>
-            <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively Continually seize impactful vortals </p>
+        <div class="preventions-box__item">
+          <img src="../src/assets/img/wash-girl.png" alt="Wear Your Hands" class="preventions-box__item__image">
+          <div class="preventions-box__item__message">
+            <h4 class="preventions-box__item__message__title">Wash Your Hands</h4>
+            <p class="preventions-box__item__message__description">Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively Continually seize impactful vortals </p>
           </div>
         </div>
-        <div class="container__item">
-          <img src="../src/assets/img/nose-rag-girl.png" alt="Use nose - rag">
-          <div class="wrapper">
-            <h4>Use nose - rag</h4>
-            <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively </p>
+        <div class="preventions-box__item">
+          <img src="../src/assets/img/nose-rag-girl.png" alt="Use nose - rag" class="preventions-box__item__image">
+          <div class="preventions-box__item__message">
+            <h4 class="preventions-box__item__message__title">Use nose - rag</h4>
+            <p class="preventions-box__item__message__description">Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively </p>
           </div>
         </div>
-        <div class="container__item">
-          <img src="../src/assets/img/avoid-girl.png" alt="Avoid contacts">
-          <div class="wrapper">
-            <h4>Avoid contacts</h4>
-            <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic</p>
+        <div class="preventions-box__item">
+          <img src="../src/assets/img/avoid-girl.png" alt="Avoid contacts" class="preventions-box__item__image">
+          <div class="preventions-box__item__message">
+            <h4 class="preventions-box__item__message__title">Avoid contacts</h4>
+            <p class="preventions-box__item__message__description">Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic</p>
           </div>
         </div>
       </div>   
     </section>
+    <footer id="footer">
+      <a href="#/">
+        <img src="../src/assets/img/Logo.svg" alt="Covid-19 Logo" class="logo" />  
+      </a>
+      <nav class="navigation">
+        <ul class="navigation__group">
+          <li class="navigation__item">Overview</li>
+          <li class="navigation__item">Contagion</li>
+          <li class="navigation__item">Symptoms</li>
+          <li class="navigation__item">Prevention</li>
+          <li class="navigation__item">Contact</li>
+        </ul>
+      </nav>   
+      <p class="copyright">2020 @ All rights reserved by pixelspark.co</p>
+    </footer>
   </div>
 </body>
 </html>
