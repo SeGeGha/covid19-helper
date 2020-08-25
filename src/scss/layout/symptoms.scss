@@ -9,6 +9,15 @@
   .symptoms__image {
     display: block;
     width: 80%;
+    min-width: 310px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+
+  #symptoms {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
