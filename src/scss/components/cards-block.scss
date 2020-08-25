@@ -1,10 +1,14 @@
+$max-card-width: 350px;
+$min-card-width: 300px;
+
 .cards-box {
   
   @include flex(row, stretch, space-around, wrap);
 
   &__item {
     width: 30%;
-    max-width: 350px;
+    max-width: $max-card-width;
+    min-width: $min-card-width;
     margin: 1em;
     padding: 2em;
     border-radius: 10px;
@@ -17,6 +21,7 @@
       margin-bottom: 0.5em;
       font-size: 1.5rem;
       line-height: 140%;
+      text-align: center;
     }
 
     &__image {
