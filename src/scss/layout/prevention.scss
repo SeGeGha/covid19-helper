@@ -2,3 +2,11 @@
   filter: $drop-shadow;
   padding: 3rem 2.5rem 1rem;
 }
+
+@media (max-width: 767px) {
+
+  #prevention {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
