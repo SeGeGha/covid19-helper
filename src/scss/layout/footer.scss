@@ -14,3 +14,44 @@
     text-transform: none;
   }
 }
+
+@media (max-width: 991px) {
+
+  #footer {
+    position: relative;
+
+    a {
+      position: absolute;
+      bottom: -10%;
+      left: 0;
+      background-image: url('./../assets/img/logo-removed.svg');
+      opacity: 0.4;
+
+      @include size(74px);
+
+      &:hover {
+        opacity: 1;
+      }
+
+      .logo {
+        display: none;
+      }
+    }
+
+    .navigation {
+      width: 100%;
+
+      &__group {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #footer {
+    padding: 0 2rem;
+  }
+}
