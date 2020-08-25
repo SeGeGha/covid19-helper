@@ -15,7 +15,7 @@
       }
 
       &__description {
-        max-height: 400px;
+        max-height: 300px;
         font-size: 1.2rem;
         line-height: 200%;
         text-align: justify;
@@ -71,7 +71,9 @@
 }
 
 @media (min-width: 768px) {
+
   .preventions-box__item {
+
     &:nth-child(2n + 2) {
 
       img {

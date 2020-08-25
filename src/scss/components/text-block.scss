@@ -8,6 +8,11 @@
     margin-bottom: 0.3em;
   }
 
+  &__message {
+    max-height: 300px;
+    overflow: auto;
+  }
+
   &__subtitle {
     color: $hover-color;
   }
@@ -46,6 +51,20 @@
 
   .info {
     width: 80%;
-    min-width: 310px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .info {
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+
+    &__message {
+      max-height: 200px;
+      text-align: justify;
+      overflow: auto;
+    }
   }
 }

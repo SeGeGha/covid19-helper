@@ -66,3 +66,10 @@ body {
   padding: 1rem 0;
   background-color: $wrapper-background-color;
 }
+
+@media (max-width: 767px) {
+
+  html {
+    font-size: 80%;
+  }
+}

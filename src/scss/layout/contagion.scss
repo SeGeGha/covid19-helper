@@ -1,11 +1,12 @@
 #contagion {
-  padding: 0 2.5rem;
+  padding: 3rem 2.5rem 0;
   filter: $drop-shadow;
 }
 
 @media (max-width: 767px) {
 
   #contagion {
-    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 }

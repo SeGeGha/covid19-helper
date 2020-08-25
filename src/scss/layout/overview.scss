@@ -2,8 +2,8 @@
   filter: $drop-shadow;
 
   .appeal-box {
-    padding: 7rem 2.5rem;
-    background: url('../assets/img/ill-1.png') right no-repeat;
+    padding: 10% 2.5rem;
+    background: url('../assets/img/ill-1.png') right bottom no-repeat;
     background-size: contain;
 
     .info {    
@@ -15,7 +15,7 @@
   .description-box {
     padding: 3rem 2.5rem 1rem;
     
-    @include flex(row);
+    @include flex(row, center);
 
     &__image {
       width: 50%;
@@ -33,6 +33,44 @@
           color: $title-color;
           background-color: $hover-color;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+  #overview {
+
+    .description-box__image {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #overview {
+
+    .description-box {
+      padding-right: 0;
+      padding-left: 0;
+
+      &__image {
+        display: none;
+      }
+
+      .info {
+        text-align: center;
+      }
+    }
+
+    .appeal-box {
+      padding-right: 0;
+      padding-left: 0;
+
+      .info {
+        text-align: center;
       }
     }
   }
