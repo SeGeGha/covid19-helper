@@ -1,0 +1,71 @@
+$lineFirstColor: #ffbfbe;
+$lineSecondColor: #f26a66;
+$transition: all 0.3s;
+$btnSize: 50px;
+
+.menu-btn {
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  @include size($btnSize);
+
+  &__line,
+  &__line::after,
+  &__line::before {
+    background-color: $lineFirstColor;
+    border-radius: 10px;
+  }
+
+  &__line {
+    position: relative;
+    transition: $transition 0.5s;
+
+    @include size(100%, 16%);
+
+    &::after,
+    &::before {
+      position: absolute;
+      left: 0;
+      content: '';
+
+      @include size(100%);
+    }
+
+    &::after {
+      top: 250%;
+      transition: $transition 0.3s; 
+    }
+
+    &::before {
+      top: 500%;
+      transition: $transition 0.1s; 
+    }
+  }
+
+  &--actived {
+
+    .menu-btn__line {
+
+      @include size(100%);
+      transition: $transition 0.1s;
+
+      &::after,
+      &::before { 
+        top: 45%;
+        height: 16%;
+        background-color: $lineSecondColor; 
+      }
+
+      &::after {
+        transition: $transition 0.3s;
+        transform: rotateZ(45deg);
+      }
+    
+      &::before {
+        transition: $transition 0.5s;
+        transform: rotateZ(-45deg);      
+      }
+    }
+  }
+}

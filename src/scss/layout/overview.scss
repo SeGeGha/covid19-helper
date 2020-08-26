@@ -3,7 +3,7 @@
 
   .appeal-box {
     padding: 10% 2.5rem;
-    background: url('../assets/img/ill-1.png') right bottom no-repeat;
+    background: url('../assets/img/ill-1.png') 101% bottom no-repeat;
     background-size: contain;
 
     .info {    
@@ -41,6 +41,10 @@
 @media (max-width: 991px) {
 
   #overview {
+
+    .appeal-box {
+      background-image: url('../assets/img/ill-2.png');
+    }
 
     .description-box__image {
       width: 40%;

@@ -1,9 +1,29 @@
 #header {
   padding: 0 2.5rem;
-  
+  filter: $drop-shadow;
+
   @include flex(row, center, space-between);
 
-  img {
-    width: 150%;
+  .menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+
+  #header {
+
+    .menu-btn {
+      display: flex;
+    }
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 767px) {
+
+  #header {
+    padding: 0 0.5rem;
   }
 }
