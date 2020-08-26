@@ -1,6 +1,31 @@
 #prevention {
-  filter: $drop-shadow;
+  position: relative;
   padding: 3rem 2.5rem 1rem;
+  filter: $drop-shadow;
+
+  &::before {
+    position: absolute;   
+    top: 45%;
+    left: 0;
+    background: url('./../assets/img/corona-green.png') right no-repeat;
+    opacity: 0.8;
+    content: '';
+    background-size: cover;
+    
+    @include size($background-virus-image-size / 2, $background-virus-image-size);
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;   
+    bottom: 23%;
+    background: url('./../assets/img/corona.png') left no-repeat;
+    opacity: 0.4;
+    content: '';
+    background-size: cover;
+    
+    @include size($background-virus-image-size, $background-virus-image-size * 1.5);
+  } 
 }
 
 @media (max-width: 767px) {

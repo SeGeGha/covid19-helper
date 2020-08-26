@@ -1,3 +1,5 @@
+$background-virus-image-size: 100px;
+
 #overview {
   filter: $drop-shadow;
 
@@ -13,12 +15,58 @@
   }
 
   .description-box {
+    position: relative;
     padding: 3rem 2.5rem 1rem;
     
     @include flex(row, center);
 
     &__image {
+      position: relative;
       width: 50%;
+
+      &__background {
+        width: 100%;
+      }
+
+      &__virus {
+        position: absolute;
+        top: 55%;
+        left: 40%;
+        width: 25%;
+        animation: rotation 50s infinite linear;
+
+        &:nth-child(2) {
+          top: 25%;
+          width: 40%;
+          animation: rotation 120s infinite linear reverse;
+        }
+
+        &:nth-child(3) {
+          top: 40%;
+          left: 25%;
+          animation: rotation 80s infinite linear;
+        }
+      } 
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      right: 0;   
+      bottom: 0;
+      background: url('./../assets/img/corona.png') left no-repeat;  
+      opacity: 0.4;
+      content: '';
+      background-size: cover; 
+      
+      @include size($background-virus-image-size, $background-virus-image-size * 2);
+    }
+
+    &::before {
+      right: 10%;
+      bottom: -25%;
+      height: $background-virus-image-size;
+      background-image: url('./../assets/img/corona-green.png');
     }
 
     .info {
