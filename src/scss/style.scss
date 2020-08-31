@@ -4,6 +4,8 @@
 
 @import './abstract/mixin.scss';
 
+@import './components/scrollbar.scss';
+
 @import './components/header-logo.scss';
 
 @import './components/text-block.scss';
@@ -36,6 +38,11 @@
   border: 0;
   outline: none;
   cursor: default;
+
+  &::after,
+  &::before {
+    pointer-events: none;
+  }
 }
 
 button, a > img {

@@ -11,6 +11,10 @@ $background-virus-image-size: 100px;
     .info {    
       margin: 0;
       text-align: justify;
+
+      &__message {
+        text-transform: none;
+      }
     }
   }
 
@@ -71,6 +75,11 @@ $background-virus-image-size: 100px;
 
     .info {
       text-align: justify;
+
+      &__message {
+        margin-bottom: 2em;
+        text-transform: none;
+      }
 
       &__btn-help {
         color: $hover-color;
