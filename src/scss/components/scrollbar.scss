@@ -19,8 +19,10 @@ $body-scrollbar-thumb-hover-color: $title-color;
 }
 
 ::-webkit-scrollbar-button {
+
   &:vertical,
   &:horizontal {
+
     &:start:decrement,
     &:end:increment {
       display: none;
@@ -29,8 +31,8 @@ $body-scrollbar-thumb-hover-color: $title-color;
 }
 
 body::-webkit-scrollbar {
-  background-color: $body-scrollbar-color;
   width: $scrollbar-size * 2;
+  background-color: $body-scrollbar-color;
 
   &-thumb {
     background-color: $body-scrollbar-thumb-color;

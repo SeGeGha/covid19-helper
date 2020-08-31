@@ -1,0 +1,57 @@
+.statistics-table {
+  width: 45%;
+  max-width: 500px; 
+  padding: 0 2.5rem;
+  border-collapse: collapse;
+
+  &__row {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    border-bottom: 1px solid rgb(128, 128, 128);
+
+    &__cell {
+      padding: 0.5rem;
+      vertical-align: middle;
+    }
+
+    tbody & {
+
+      &:hover {
+        background: rgba(128, 128, 128, 0.2);
+      }
+    }
+  }
+}
+
+.cell {
+
+  &--id {
+    text-align: center;
+  }
+
+  &--value {
+    text-align: end;
+  }
+
+  &--th {
+    height: 90px;
+    font-size: 2rem;
+    line-height: 1.3em;
+    color: $title-color;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .statistics-table {
+    width: 100%;
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .statistics-table {
+    min-width: 300px;
+  }
+}

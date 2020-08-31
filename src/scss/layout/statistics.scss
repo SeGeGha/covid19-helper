@@ -1,0 +1,41 @@
+$border: 1px solid rgb(128, 128, 128);
+
+#statistics {
+  padding: 3rem 2.5rem 1rem;
+  filter: $drop-shadow;
+
+  @include flex(row, stretch, center, wrap);
+
+  .info {
+    width: 100%;
+  }
+
+  .statistics-table {
+
+    &--leaderboard {
+      margin-right: 2rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+  #statistics {
+
+    .statistics-table--leaderboard {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #statistics {
+    padding-right: 0;
+    padding-left: 0;
+
+    .statistics-table {
+      margin: 0 2em;
+    }
+  }
+}

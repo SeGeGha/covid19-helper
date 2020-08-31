@@ -35,6 +35,13 @@
   }
 }
 
+@media (max-width: 991px) {
+
+  .preventions-box__item {
+    padding: 0;
+  }
+}
+
 @media (max-width: 767px) {
 
   .preventions-box {
