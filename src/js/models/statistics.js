@@ -2,32 +2,33 @@ import requestSender from '../utils/requestSender';
 import covidApiUrl from '../constants/urls';
 
 const statistics = {
-  wrapper: document.querySelector('#statistics'),
-  leaderboard: {
-    container: document.querySelector('#statistics .statistics-table--leaderboard'),
-    info: null,
-  },
-  countryStatistics: {
-    container: document.querySelector('#statistics .statistics-table--country-info'),
-    info: null,
+  info: null,
+  wrappers: {
+    leaderboard: document.querySelector('#statistics .statistics-table--leaderboard'),
+    countryInfo: document.querySelector('#statistics .statistics-table--country-info'),
   },
 
   init() {
     requestSender(covidApiUrl).then(({ Global, Countries }) => {
-      this.leaderboard.info = Countries.sort((a, b) => b.TotalConfirmed - a.TotalConfirmed);
-      this.countryStatistics.info = Countries;
+      this.info = Countries.sort((a, b) => b.TotalConfirmed - a.TotalConfirmed);
 
       this.render.leaderboard.call(this);
       this.render.country.call(this, Global);
+
+      this.wrappers.leaderboard.querySelector('tbody').addEventListener('click', ({ target }) => {
+        const countryId = target.closest('.statistics-table__row').dataset.index;
+
+        this.render.country.call(this, this.info[countryId]);
+      });
     });
   },
 
   render: {
     leaderboard() {
-      const { container, info } = this.leaderboard;
+      const { leaderboard } = this.wrappers;
 
-      const content = info.map(({ Country, TotalConfirmed }, id) => `
-          <tr class="statistics-table__row">
+      const content = this.info.map(({ Country, TotalConfirmed }, id) => `
+          <tr class="statistics-table__row" data-index=${id}>
             <td class="statistics-table__row__cell cell--id">${id + 1}. </td>
             <td class="statistics-table__row__cell cell--country-name">${Country} </td>
             <td class="statistics-table__row__cell cell--value">${TotalConfirmed}</td>
@@ -35,13 +36,13 @@ const statistics = {
         `)
         .reduce((acc, countryELement) => acc + countryELement);
 
-      container.insertAdjacentHTML('beforeend', `<tbody>${content}</tbody>`);
+      leaderboard.insertAdjacentHTML('beforeend', `<tbody>${content}</tbody>`);
     },
     country(info) {
-      this.countryStatistics.container.innerHTML = `
+      this.wrappers.countryInfo.innerHTML = `
       <thead>
         <tr class="statistics-table__row">
-          <th class="statistics-table__row__cell cell--th" colspan="2">${info.name || 'Global'}</th>
+          <th class="statistics-table__row__cell cell--th" colspan="2">${info.Country || 'Global'}</th>
         </tr>    
       </thead>
       <tbody>
