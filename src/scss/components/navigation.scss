@@ -92,22 +92,3 @@ $btnSize: 50px;
     }
   }
 }
-
-@media (max-width: 991px) {
-
-  .navigation__group {
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    width: 100%;
-    padding: 1em;
-    background: #f9bdbdd9;
-    transition: all 0.5s 0.5s;
-    visibility: hidden;
-
-    .navigation--opened & {
-      left: 0;
-      visibility: visible;
-    }
-  }
-}

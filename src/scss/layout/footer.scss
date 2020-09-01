@@ -20,7 +20,7 @@
   #footer {
     position: relative;
 
-    a {
+    a[href="#header"] {
       position: absolute;
       bottom: -10%;
       left: 0;
@@ -40,11 +40,6 @@
 
     .navigation {
       width: 100%;
-
-      &__group {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
     }
   }
 }
