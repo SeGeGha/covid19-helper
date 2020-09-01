@@ -4,6 +4,7 @@ import covidApiUrl from '../constants/urls';
 const statistics = {
   info: null,
   wrappers: {
+    main: document.querySelector('#statistics'),
     leaderboard: document.querySelectorAll('#statistics .statistics-table')[0],
     countryInfo: document.querySelectorAll('#statistics .statistics-table')[1],
   },
@@ -15,7 +16,7 @@ const statistics = {
       this.render.leaderboard.call(this);
       this.render.country.call(this, Global);
 
-      document.querySelector('#statistics').classList.remove('content-loading');
+      this.wrappers.main.classList.remove('content-loading');
 
       this.wrappers.leaderboard.querySelector('tbody').addEventListener('click', ({ target }) => {
         const countryId = target.closest('.statistics-table__row').dataset.index;
