@@ -77,6 +77,7 @@ $background-virus-image-size: 100px;
       text-align: justify;
 
       &__message {
+        max-height: none;
         margin-bottom: 2em;
         text-transform: none;
       }
@@ -113,26 +114,14 @@ $background-virus-image-size: 100px;
 
   #overview {
 
-    .description-box {
-      padding-right: 0;
-      padding-left: 0;
-
-      &__image {
-        display: none;
-      }
-
-      .info {
-        text-align: center;
-      }
-    }
-
+    .description-box,
     .appeal-box {
       padding-right: 0;
       padding-left: 0;
+    }
 
-      .info {
-        text-align: center;
-      }
+    .description-box__image {
+      display: none;
     }
   }
 }
