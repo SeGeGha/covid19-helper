@@ -2,14 +2,10 @@
   padding: 3rem 2.5rem 1rem;
   filter: $drop-shadow;
 
-  @include flex(row, stretch, center, wrap);
+  @include flex(row, stretch, space-around, wrap);
 
   .info {
     width: 100%;
-  }
-
-  .statistics-table--scrolled {
-    margin-right: 2rem;
   }
 
   .corona-spinner {
@@ -24,16 +20,6 @@
   
     .statistics-table {
       display: none;
-    }
-  }
-}
-
-@media (max-width: 991px) {
-
-  #statistics {
-
-    .statistics-table--scrolled {
-      margin-right: 0;
     }
   }
 }

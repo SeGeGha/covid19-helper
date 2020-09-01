@@ -1,5 +1,5 @@
-$desktop-max-width: 500px;
-$tablet-max-width: 750px;
+$desktop-max-width: 550px;
+$mobile-max-width: 450px;
 $mobile-min-width: 300px;
 $table-height: 400px;
 
@@ -64,7 +64,6 @@ $table-height: 400px;
 
   .statistics-table {
     width: 100%;
-    max-width: $tablet-max-width;
   }
 
   .cell--th {
@@ -75,6 +74,7 @@ $table-height: 400px;
 @media (max-width: 767px) {
 
   .statistics-table {
+    max-width: $mobile-max-width;
     min-width: $mobile-min-width;
   }
 }

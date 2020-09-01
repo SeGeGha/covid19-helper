@@ -107,6 +107,18 @@ $background-virus-image-size: 100px;
     .description-box__image {
       width: 40%;
     }
+
+    .appeal-box,
+    .description-box {
+
+      .info {
+        text-align: center;
+
+        &__message {
+          text-align: justify;
+        }
+      }
+    }
   }
 }
 
@@ -118,6 +130,11 @@ $background-virus-image-size: 100px;
     .appeal-box {
       padding-right: 0;
       padding-left: 0;
+
+      .info__subtitle,
+      .info__title {
+        text-align: center;
+      }
     }
 
     .description-box__image {
