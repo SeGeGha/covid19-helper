@@ -4,16 +4,18 @@ import covidApiUrl from '../constants/urls';
 const statistics = {
   info: null,
   wrappers: {
-    leaderboard: document.querySelector('#statistics .statistics-table--leaderboard'),
-    countryInfo: document.querySelector('#statistics .statistics-table--country-info'),
+    leaderboard: document.querySelectorAll('#statistics .statistics-table')[0],
+    countryInfo: document.querySelectorAll('#statistics .statistics-table')[1],
   },
 
   init() {
     requestSender(covidApiUrl).then(({ Global, Countries }) => {
-      this.info = Countries.sort((a, b) => b.TotalConfirmed - a.TotalConfirmed);
+      this.info = Countries.sort((currentCountry, nextCountry) => nextCountry.TotalConfirmed - currentCountry.TotalConfirmed);
 
       this.render.leaderboard.call(this);
       this.render.country.call(this, Global);
+
+      document.querySelector('#statistics').classList.remove('content-loading');
 
       this.wrappers.leaderboard.querySelector('tbody').addEventListener('click', ({ target }) => {
         const countryId = target.closest('.statistics-table__row').dataset.index;

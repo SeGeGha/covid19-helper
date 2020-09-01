@@ -16,13 +16,13 @@
         <div class="navigation__btn">
           <div class="navigation__btn__line"></div>
         </div>
-        <ul class="navigation__group">
-          <li class="navigation__item navigation__item--actived">Overview</li>
-          <li class="navigation__item">Contagion</li>
-          <li class="navigation__item">Symptoms</li>
-          <li class="navigation__item">Prevention</li>
-          <li class="navigation__item">Contact</li>
-        </ul>
+        <div class="navigation__group">
+          <a href="#overview" class="navigation__item">Overview</a>
+          <a href="#contagion" class="navigation__item">Contagion</a>
+          <a href="#symptoms" class="navigation__item">Symptoms</a>
+          <a href="#prevention" class="navigation__item">Prevention</a>
+          <a href="#statistics" class="navigation__item">Statistics</a>
+        </div>
       </nav>
     </header>
     <section id="overview">
@@ -118,12 +118,17 @@
         </div>
       </div>   
     </section>
-    <section id="statistics">
+    <section id="statistics" class="content-loading">
       <div class="info">
         <h3 class="info__subtitle">COVID-19</h3>
         <h2 class="info__title">Statistics</h2>
         <p class="info__message">Get information about COVID-19 in the world:</p>
       </div>  
+      <div class="corona-spinner">
+        <div class="corona-spinner__item"></div>
+        <div class="corona-spinner__item"></div>
+        <div class="corona-spinner__item"></div>
+      </div>
       <table class="statistics-table statistics-table--scrolled">
         <thead>
           <tr class="statistics-table__row">
@@ -140,13 +145,13 @@
         <img src="../src/assets/img/logo-with-title.svg" alt="Covid-19 Logo" class="logo" />  
       </a>
       <nav class="navigation">
-        <ul class="navigation__group">
-          <li class="navigation__item">Overview</li>
-          <li class="navigation__item">Contagion</li>
-          <li class="navigation__item">Symptoms</li>
-          <li class="navigation__item">Prevention</li>
-          <li class="navigation__item">Contact</li>
-        </ul>
+        <div class="navigation__group">
+          <a href="#overview" class="navigation__item">Overview</a>
+          <a href="#contagion" class="navigation__item">Contagion</a>
+          <a href="#symptoms" class="navigation__item">Symptoms</a>
+          <a href="#prevention" class="navigation__item">Prevention</a>
+          <a href="#statistics" class="navigation__item">Statistics</a>
+        </div>
       </nav>   
       <p class="copyright">2020 @ All rights reserved by pixelspark.co and segegha</p>
     </footer>

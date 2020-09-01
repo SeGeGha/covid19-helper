@@ -11,6 +11,21 @@
   .statistics-table--scrolled {
     margin-right: 2rem;
   }
+
+  .corona-spinner {
+    display: none;
+  }
+
+  &.content-loading {
+
+    .corona-spinner {
+      display: flex;
+    }
+  
+    .statistics-table {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 991px) {

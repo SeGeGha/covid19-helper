@@ -1,0 +1,80 @@
+$circle-size: 150px;
+$wrapper-size: 480px;
+
+.corona-spinner {
+  width: $wrapper-size;
+
+  @include flex(row, center, space-between);
+  
+  &__item {
+    z-index: 2;
+    background: url('./../assets/img/virus-2.png') center no-repeat;
+    border-radius: 50%;
+    transform: translateX(0);
+    animation: rotation 50s infinite linear;
+    background-size: contain;
+
+    @include size($circle-size);
+
+    &:nth-child(1) {
+      animation: move-1 2s infinite;
+    }
+
+    &:nth-child(2) {
+      background-image: url('./../assets/img/virus-1.png');
+
+      @include size($circle-size * 1.5);
+    }
+
+    &:nth-child(3) {
+      animation: move-3 2s infinite;
+    }
+  }
+}
+
+@keyframes move-1 {
+
+  0% {z-index: 3; transform: translateX(0);}
+
+  25% {z-index: 3; transform: translateX(60%);}
+
+  50% {z-index: 3; transform: translateX(0);}
+  
+  50.1% {z-index: 1; transform: translateX(0);}
+
+  75% {z-index: 1; transform: translateX(60%);}
+
+  100% {z-index: 1; transform: translateX(0);}
+}
+
+@keyframes move-3 {
+
+  0% {z-index: 1; transform: translateX(0);}
+
+  25% {z-index: 1; transform: translateX(-60%);}
+
+  50% {z-index: 1; transform: translateX(0);}
+  
+  50.1% {z-index: 3; transform: translateX(0);}
+
+  75% {z-index: 3; transform: translateX(-60%);}
+
+  100% {z-index: 3; transform: translateX(0);}
+}
+
+@media (max-width: 767px) {
+
+  .corona-spinner {
+    width: $wrapper-size * 0.625;
+
+    &__item {
+
+      @include size($circle-size * 0.55);
+
+      &:nth-child(2) {
+
+        @include size($circle-size);
+      }
+    }
+  }
+}
