@@ -3,13 +3,15 @@ import covidApiUrl from '../constants/urls';
 
 const statistics = {
   info: null,
-  wrappers: {
-    main: document.querySelector('#statistics'),
-    leaderboard: document.querySelectorAll('#statistics .statistics-table')[0],
-    countryInfo: document.querySelectorAll('#statistics .statistics-table')[1],
-  },
+  wrappers: null,
 
-  init() {
+  init(statSection, leaderboardTable, countryInfoTable) {
+    this.wrappers = {
+      main: statSection,
+      leaderboard: leaderboardTable,
+      countryInfo: countryInfoTable,
+    };
+
     requestSender(covidApiUrl).then(({ Global, Countries }) => {
       this.info = Countries.sort((currentCountry, nextCountry) => nextCountry.TotalConfirmed - currentCountry.TotalConfirmed);
 

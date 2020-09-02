@@ -13,19 +13,19 @@ $btnSize: 50px;
       color: $title-color;
       text-decoration: none;
     }
-  }
 
-  &__item {
-    padding: 0.5em 1em;
-    font-size: 1.5rem;
-    cursor: pointer;
-    list-style: none;
-
-    &:hover {
-      padding: calc(0.5em - 2px) calc(1em - 2px);
-      color: $hover-color;
-      border: 2px solid $hover-color;
-      border-radius: 45px;
+    &__item {
+      padding: 0.5em 1em;
+      font-size: 1.5rem;
+      cursor: pointer;
+      list-style: none;
+  
+      &:hover {
+        padding: calc(0.5em - 2px) calc(1em - 2px);
+        color: $hover-color;
+        border: 2px solid $hover-color;
+        border-radius: 45px;
+      }
     }
   }
 
