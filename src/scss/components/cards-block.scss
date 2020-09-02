@@ -1,0 +1,44 @@
+$max-card-width: 350px;
+$min-card-width: 300px;
+
+.cards-box {
+  
+  @include flex(row, stretch, space-around, wrap);
+
+  &__item {
+    width: 30%;
+    max-width: $max-card-width;
+    min-width: $min-card-width;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+    transition: transform 0.4s;
+
+    @include flex(column, center, flex-start);
+
+    &__title {
+      margin-bottom: 0.5em;
+      font-size: 1.5rem;
+      line-height: 140%;
+      text-align: center;
+    }
+
+    &__image {
+      height: 200px;
+      margin-bottom: 2em;
+    }
+
+    &__message {
+      line-height: 185%;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      padding-bottom: calc(2em - 6px);
+      border-bottom: 6px solid $hover-color;
+      transform: translateY(-5%);
+    }
+  }
+}

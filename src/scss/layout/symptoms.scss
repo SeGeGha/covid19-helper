@@ -1,0 +1,36 @@
+#symptoms {
+  position: relative;
+  padding: 3rem 2.5rem 1rem;
+  filter: $drop-shadow;
+
+  .info__message {
+    margin-bottom: 0;
+  }
+
+  .symptoms__image {
+    display: block;
+    width: 80%;
+    min-width: 310px;
+    margin: 0 auto;
+  }
+
+  &::before {
+    position: absolute;   
+    top: 5%;
+    right: 25%;
+    background: url('./../assets/img/corona.png') left no-repeat;
+    opacity: 0.4;
+    content: '';
+    background-size: cover;
+    
+    @include size($background-virus-image-size);
+  } 
+}
+
+@media (max-width: 767px) {
+
+  #symptoms {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

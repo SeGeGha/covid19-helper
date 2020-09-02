@@ -1,0 +1,51 @@
+$scrollbar-size: 5px;
+$body-scrollbar-color: rgba(3, 87, 85, 0.3);
+$body-scrollbar-thumb-color: rgba(3, 87, 85, 0.7);
+$body-scrollbar-thumb-hover-color: $title-color;
+
+::-webkit-scrollbar {
+  background-color: $title-color;
+
+  @include size($scrollbar-size);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $body-background-color;
+  box-shadow: inset 1px 1px 5px darken($body-background-color, 20%);
+
+  &:hover {
+    background-color: darken($body-background-color, 20%);
+  }
+}
+
+::-webkit-scrollbar-button {
+
+  &:vertical,
+  &:horizontal {
+
+    &:start:decrement,
+    &:end:increment {
+      display: none;
+    }
+  }
+}
+
+body::-webkit-scrollbar {
+  width: $scrollbar-size * 2;
+  background-color: $body-scrollbar-color;
+
+  &-thumb {
+    background-color: $body-scrollbar-thumb-color;
+    border-radius: 3px;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $body-scrollbar-thumb-hover-color;
+    }
+  }
+}
+
+html, body {
+  scrollbar-color: $body-scrollbar-thumb-color $body-scrollbar-color; 
+  scrollbar-width: thin;
+}

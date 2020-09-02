@@ -1,0 +1,40 @@
+$logo-size: 150px;
+
+.logo-wrapper {
+
+  @include flex(row, center, center);
+
+  .title {
+    font-size: 2.5rem;
+    line-height: 100%;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .logo {
+    width: $logo-size;
+
+    animation: rotation 50s infinite linear;
+  }
+}
+
+@keyframes rotation {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+
+  .logo-wrapper {
+
+    .logo {
+      width: ($logo-size * 0.5);
+    }
+  }
+}

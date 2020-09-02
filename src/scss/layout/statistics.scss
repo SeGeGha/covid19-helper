@@ -1,0 +1,37 @@
+#statistics {
+  padding: 3rem 2.5rem 1rem;
+  filter: $drop-shadow;
+
+  @include flex(row, stretch, space-around, wrap);
+
+  .info {
+    width: 100%;
+  }
+
+  .corona-spinner {
+    display: none;
+  }
+
+  &.content-loading {
+
+    .corona-spinner {
+      display: flex;
+    }
+  
+    .statistics-table {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #statistics {
+    padding-right: 0;
+    padding-left: 0;
+
+    .statistics-table {
+      margin: 0 2em;
+    }
+  }
+}

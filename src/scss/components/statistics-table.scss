@@ -1,0 +1,80 @@
+$desktop-max-width: 550px;
+$mobile-max-width: 450px;
+$mobile-min-width: 300px;
+$table-height: 400px;
+
+.statistics-table {
+  max-width: $desktop-max-width; 
+  padding: 0 2.5rem;
+  border-collapse: collapse;
+
+  @include size(45%, $table-height);
+
+  &__row {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    border-bottom: 1px solid rgb(128, 128, 128);
+
+    &__cell {
+      padding: 0.5rem;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    tbody & {
+
+      &:hover {
+        background: rgba(128, 128, 128, 0.2);
+      }
+    }
+  }
+
+  &--scrolled {
+
+    tbody, thead {
+      display: block;
+    }
+
+    tbody {
+      height: ($table-height * 0.75);
+      overflow: auto;
+    }
+  }
+}
+
+.cell {
+
+  &--id {
+    text-align: center;
+  }
+
+  &--value {
+    text-align: end;
+  }
+
+  &--th {
+    height: ($table-height * 0.25);
+    font-size: 2rem;
+    line-height: 1.3em;
+    color: $title-color;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .statistics-table {
+    width: 100%;
+  }
+
+  .cell--th {
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .statistics-table {
+    max-width: $mobile-max-width;
+    min-width: $mobile-min-width;
+  }
+}

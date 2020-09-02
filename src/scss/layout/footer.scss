@@ -1,0 +1,52 @@
+#footer {
+  padding: 0 2.5rem;
+
+  @include flex(row, center, space-between, wrap);
+
+  .navigation__item {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+    text-transform: none;
+  }
+}
+
+@media (max-width: 991px) {
+
+  #footer {
+    position: relative;
+
+    a[href="#header"] {
+      position: absolute;
+      bottom: -10%;
+      left: 0;
+      background-image: url('./../assets/img/logo-removed.svg');
+      opacity: 0.4;
+
+      @include size(74px);
+
+      &:hover {
+        opacity: 1;
+      }
+
+      .logo {
+        display: none;
+      }
+    }
+
+    .navigation {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #footer {
+    padding: 0 2rem;
+  }
+}

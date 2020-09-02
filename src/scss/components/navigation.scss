@@ -1,0 +1,94 @@
+$lineFirstColor: #ffbfbe;
+$lineSecondColor: #f26a66;
+$transition: all 0.3s;
+$btnSize: 50px;
+
+.navigation {
+
+  &__group {
+    
+    @include flex(row, stretch, center, wrap);
+
+    a {
+      color: $title-color;
+      text-decoration: none;
+    }
+
+    &__item {
+      padding: 0.5em 1em;
+      font-size: 1.5rem;
+      cursor: pointer;
+      list-style: none;
+  
+      &:hover {
+        padding: calc(0.5em - 2px) calc(1em - 2px);
+        color: $hover-color;
+        border: 2px solid $hover-color;
+        border-radius: 45px;
+      }
+    }
+  }
+
+  &__btn {
+    overflow: hidden;
+    cursor: pointer;
+  
+    @include size($btnSize);
+  
+    &__line,
+    &__line::after,
+    &__line::before {
+      background-color: $lineFirstColor;
+      border-radius: 10px;
+    }
+  
+    &__line {
+      position: relative;
+      transition: $transition 0.5s;
+  
+      @include size(100%, 16%);
+  
+      &::after,
+      &::before {
+        position: absolute;
+        left: 0;
+        content: '';
+  
+        @include size(100%);
+      }
+  
+      &::after {
+        top: 250%;
+        transition: $transition 0.3s; 
+      }
+  
+      &::before {
+        top: 500%;
+        transition: $transition 0.1s; 
+      }
+
+      .navigation__btn--actived & {
+        transition: $transition 0.1s;
+        
+        @include size(100%);
+  
+        &::after,
+        &::before { 
+          top: 45%;
+          height: 16%;
+          background-color: $lineSecondColor; 
+        }
+  
+        &::after {
+          transition: $transition 0.3s;
+          transform: rotateZ(45deg);
+        }
+      
+        &::before {
+          transition: $transition 0.5s;
+          transform: rotateZ(-45deg);      
+        }
+      }
+    }
+  }
+}
