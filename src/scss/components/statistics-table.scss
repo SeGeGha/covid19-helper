@@ -1,6 +1,6 @@
 $desktop-max-width: 550px;
 $mobile-max-width: 450px;
-$mobile-min-width: 300px;
+$mobile-min-width: 280px;
 $table-height: 400px;
 
 .statistics-table {
@@ -76,5 +76,6 @@ $table-height: 400px;
   .statistics-table {
     max-width: $mobile-max-width;
     min-width: $mobile-min-width;
+    padding: 0;
   }
 }

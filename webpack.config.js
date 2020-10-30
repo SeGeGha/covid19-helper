@@ -13,6 +13,7 @@ const config = (env = {}) => {
       new HtmlWebpackPlugin({
         template: 'public/index.html',
         filename: './index.html',
+        favicon: './src/assets/icon/favicon.ico',
       }),
     ];
 
